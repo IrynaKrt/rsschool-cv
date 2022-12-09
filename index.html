@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My CV</title>
+</head>
+<body>
+    <h1 class="about-me">Iryna Sittsava</h1>
+    <h2 class="about-me">Student & future full-stack developer</h2>
+
+    <section class="kontact">
+        <h4 class="email">My e-mail: <a href=""> irynakrt@gmail.com</a></h4>
+        <h4 class="phone">My phone: <a href=""> +375447174281 (Telegram&WhatsApp)</a></h4>
+    </section>
+
+    <section class="information">
+        <div class="about-live">
+            <h3 class="live">Somethings about me:</h3>
+            <p class="live">My name is Irina, I'm 19 years old and my English is not that good...
+                By education I am a teacher of German, with level B2, but I became interested in another "language". And now for a little over 5 months I have been learning JavaScript! 
+                Of my strengths, I can single out perseverance and diligence - which allows me not to quit my studies, even when it is very difficult! I am also an open, active and very sociable person.
+                I am ready to learn and learn new things, because I want to be useful!</p>
+        </div>
+        <div class="about-skills">
+            <h3 class="sills">Skills</h3>
+            <ul class="skills">
+                <li>basic knowledge of layout & design;</li>
+                <li>basic knowledge of CSS and SCSS syntax;</li>
+                <li>good command of JS</li>
+                <li>skills of working with Git&GitHub;</li>
+                <li>skills of working with JQuery, Bootstrap, Angular;</li>
+                <li>skills of working with Webpack, Gulp;</li>
+                <li>skills of working with AJAX, RAF;</li>
+                <li>creating projects in OOP-style and own mini-library;</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="example">
+        <h3 class="example">For example</h3>
+        <div class="example">
+            <pre>
+                <code>
+                    JavaScript
+                    const postData = async (url, data) => {
+                        let res = await fetch(url, {
+                            method: "POST",
+                            body: data
+                        });
+
+                        return await res.text();
+                    };
+
+                    const getResource = async (url) => {
+                        let res = await fetch(url);
+
+                        if(!res.ok) {
+                            throw new Error(`Could not fetch ${url}, status: ${res.status}`);
+                        }
+
+                        return await res.json();
+                    }; 
+
+                    export {postData, getResource}; 
+                </code>
+            </pre> 
+        </div>
+        <div class="example">
+            <pre>
+                <code>
+                    JavaScript
+                    export default class Download {
+                        constructor(btns) {
+                            this.btns = document.querySelectorAll(btns);
+                            this.path = 'assets/img/mainbg.jpg';
+                        }
+                    
+                        downloadItem(path) {
+                            const link = document.createElement('a');
+                    
+                            link.setAttribute('href', path);
+                            link.setAttribute('download', 'nice_picture');
+                    
+                            link.style.display = 'none';
+                            document.body.appendChild(link);
+                    
+                            link.click();
+                    
+                            document.body.removeChild(link);
+                        }
+                    
+                        init() {
+                            this.btns.forEach(item => {
+                                item.addEventListener('click', (e) => {
+                                    e.preventDefault();
+                                    e.stopPropagation();
+                                    this.downloadItem(this.path);
+                                });
+                            });
+                        }
+                    }
+                </code>
+            </pre> 
+        </div>
+    </section>
+    
+    <h2 class="work">I don't have any work experience yet, but I would like to try to work in a team and see how this process really happens!</h2>
+
+    <section class="education">
+        <h3 class="education">Education</h3>
+        <ol>
+            <li>MINSK STATE LINGUISTIC UNIVERSITY COLLEGE OF LINGUISTICS</li>
+            <li>intensive: "Frontend Start" from Itlogia</li>
+            <li>Practical JavaScript (Advanced level) from UDEMY</li>
+            <li>The full course on JavaScript + React (the part about React is still in the study!) from UDEMY</li>
+        </ol>
+    </section>
+
+    <section class="language">
+        <div class="english">
+            <h3 class="language">My English</h3>
+            <p class="en">My English is not good...(A2) I can understand and read, as well as write in English, but it is still difficult for me to perceive speech by ear, since I am learning by myself and there is a little lack of immersion in a foreign language environment
+                But I'll try to raise my level!</p>
+        </div>
+        <div class="germany">
+            <h3 class="language">My Germany</h3>
+            <p class="de">My German is much better - I can speak fluently with native speakers, which helps me in my work! I also read books freely and watch books in German. I have almost perfect grammatical and phonetic skills, as this is my specialty!</p>
+        </div>
+    </section>
+</body>
+</html>
