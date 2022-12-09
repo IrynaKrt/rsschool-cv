@@ -10,7 +10,7 @@
 #### Of my strengths, I can single out perseverance and diligence - which allows me not to quit my studies, even when it is very difficult! I am also an open, active and very sociable person.
 #### I am ready to learn and learn new things, because I want to be useful!
 
-### Skills
+### Skills:
 * basic knowledge of layout & design;
 * basic knowledge of CSS and SCSS syntax;
 * good command of JS
