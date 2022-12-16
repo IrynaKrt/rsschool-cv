@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My CV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="styles.css">
+    <title>CV</title>
 </head>
 <body>
     <header class="header">
         <div class="container">
             <div class="logo">
-                <img src="assets/imgs/logo.png" alt="logo">
+                <a href="https://github.com/IrynaKrt"><img src="/assets/images" alt="status"></a>
             </div>
             <nav class="menu">
                 <ul>
@@ -18,135 +20,194 @@
                         <a href="#">Home</a>
                     </li>
                     <li class="menu-item">
-                        <a href="#cars">about me</a>
+                        <a href="#basic">about me</a>
                     </li>
                     <li class="menu-item">
-                        <a href="#price">contact</a>
+                        <a href="#contact">contact</a>
                     </li>
                 </ul>
             </nav>
         </div>
       </header>
 
-      <section class="basic-info">
-        <div class="container background">
+      <main>
+
+      <section id="basic" class="basic-info">
+        <div class="container">
             <div class="prew-img">
-                <img src="" alt="me">
-                <img src="" alt="my soul">
-                <h1 class="name">Iryna Sittsava</h1>
+                <div class="me">
+                    <img src="/assets/images/me.jpg" alt="me">
+                </div>
+                <div class="name">
+                    <h1 class="name">Iryna Sittsava</h1>
+                </div>
                 <h2 class="status">Student & future full-stack developer</h2>
             </div>
             <div class="info-bio">
-                <h2 class="bio">BIO</h2>
-                <p class="bio">
-                My name is Irina, I'm 19 years old and my English is not that good...
-                By education I am a teacher of German, with level B2, but I became interested in another "language". And now for a little over 5 months I have been learning JavaScript!
-                Of my strengths, I can single out perseverance and diligence - which allows me not to quit my studies, even when it is very difficult! I am also an open, active and very sociable person.
-                I am ready to learn and learn new things, because I want to be useful!
-                </p>
+                <div class="bio">
+                    <h2>BIO</h2>
+                </div>
+                <p class="bio">My name is Irina, I'm 19 years old and my English is not that good...</p>
+                <p class="bio">By education I am a teacher of German, with level B2, but I became interested in another "language". And now for a little over 5 months I have been learning JavaScript!</p>
+                <p class="bio">Of my strengths, I can single out perseverance and diligence - which allows me not to quit my studies, even when it is very difficult! I am also an open, active and very sociable person.</p>
+                <br>
+                <p class="bio">I am ready to learn and learn new things, because I want to be useful!</p>
             </div>
-            <div class="info-contact">
-                <h3 class="contact">Contact</h3>
+            <div id="contact" class="info-contact">
+                <h3>Contact</h3>
                 <ul class="contact">
                     <li>
-                        <div class="edu-item">
-                            <img src="assets/imgs/gear.png" alt="Gear">
-                            <div>Привод</div>
+                        <div class="contact-item">
+                            <a href="https://mail.google.com"><img src="/assets/images/gmail.png" alt="mail"></a>
+                            <div class="item-link">
+                                <a href="https://mail.google.com">irynakrt@gmail.com</a>
+                            </div>
                         </div>
                     </li>
                     <li>
-                        <div class="edu-item">
-                            <img src="assets/imgs/gear.png" alt="Gear">
-                            <div>Привод</div>
+                        <div class="contact-item">
+                            <a href="https://web.telegram.org"><img src="/assets/images/telegram.png" alt="telegram"></a>
+                            <div class="item-link">
+                                <a href="https://web.telegram.org">+375447174281</a>
+                            </div>
                         </div>
                     </li>
                     <li>
-                        <div class="edu-item">
-                            <img src="assets/imgs/gear.png" alt="Gear">
-                            <div>Привод</div>
+                        <div class="contact-item">
+                            <a href="https://discord.com/"><img src="/assets/images/discord.png" alt="discord"></a>
+                            <div class="item-link">
+                                <a href="https://discord.com/">irynakrt#1720</a>
+                            </div>
                         </div>
                     </li>
                     <li>
-                        <div class="edu-item">
-                            <img src="assets/imgs/gear.png" alt="Gear">
-                            <div>Привод</div>
+                        <div class="contact-item">
+                            <a href="https://www.instagram.com/rinakashi13/?hl=ru"><img src="/assets/images/inst.png" alt="inst"></a>
+                            <div class="item-link">
+                                <a href="https://www.instagram.com/rinakashi13/?hl=ru">@rinakashi13</a>
+                            </div>
                         </div>
                     </li>
                 </ul>
             </div>
         </div>
       </section>
-
-      <section class="prof-info">
+      <section id="prof" class="prof-info">
         <div class="container">
             <div class="education">
                 <h2 class="education">Education</h2>
                 <ul class="education">
                     <li>
                         <div class="edu-item">
-                            <img src="assets/imgs/gear.png" alt="Gear">
-                            <div>Привод</div>
-                            <div>{{car.gear}}</div>
+                            <img src="/assets/images/mslu.png" alt="MSLU">
+                            <div>MSLU College Of Linguistics</div>
+                            <br>
+                            <div>2018-2022</div>
                         </div>
                     </li>
                     <li>
                         <div class="edu-item">
-                            <img src="assets/imgs/gear.png" alt="Gear">
-                            <div>Привод</div>
-                            <div>{{car.gear}}</div>
+                            <img src="/assets/images/itlog.png" alt="Itlogia">
+                            <div>Intensive: "Frontend Start" from Itlogia</div>
+                            <br>
+                            <div>2022</div>
                         </div>
                     </li>
                     <li>
                         <div class="edu-item">
-                            <img src="assets/imgs/gear.png" alt="Gear">
-                            <div>Привод</div>
-                            <div>{{car.gear}}</div>
+                            <img src="/assets/images/udemy.png" alt="Udemy">
+                            <div>Practical JavaScript <span>(Advanced level)</span></div>
+                            <br>
+                            <div>2022</div>
                         </div>
                     </li>
                     <li>
                         <div class="edu-item">
-                            <img src="assets/imgs/gear.png" alt="Gear">
-                            <div>Привод</div>
-                            <div>{{car.gear}}</div>
+                            <img src="/assets/images/udemy.png" alt="Udemy">
+                            <div>The full course on JavaScript + React* from UDEMY</div>
+                            <br>
+                            <div>2022-2023</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="edu-item">
+                            <img src="/assets/images/codebas.webp" alt="Code Basic">
+                            <div>HTML- & CSS-cours from Code Basic </div>
+                            <br>
+                            <div>2022</div>
+                        </div>
+                    </li>
+                </ul>
+                <span>* (the part about React is still in the study!)</span>
+            </div>
+            <div class="skills">
+                <h2>Skills</h2>
+                <ul class="skills">
+                    <li>
+                        <div class="skill-item">
+                            <img src="/assets/images/html.png" alt="HTML">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="skill-item">
+                            <img src="/assets/images/css.png" alt="CSS">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="skill-item">
+                            <img src="/assets/images/js.png" alt="JS">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="skill-item">
+                            <img src="/assets/images/git.png" alt="GIT">
+                        </div>
+                    </li>
+                                        <li>
+                        <div class="skill-item">
+                            <img src="/assets/images/react.png" alt="REACT">
                         </div>
                     </li>
                 </ul>
             </div>
-            <div class="skills">
-                <h2 class="skills">Skills</h2>
-                <ul class="skills">
-                    <li>
-                        <div class="edu-item">
-                            <img src="assets/imgs/gear.png" alt="Gear">
-                            <div>Привод</div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="edu-item">
-                            <img src="assets/imgs/gear.png" alt="Gear">
-                            <div>Привод</div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="edu-item">
-                            <img src="assets/imgs/gear.png" alt="Gear">
-                            <div>Привод</div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="edu-item">
-                            <img src="assets/imgs/gear.png" alt="Gear">
-                            <div>Привод</div>
-                        </div>
-                    </li>
-                </ul>
+            <div class="skills-more">
                 <h3 class="skills-more">And too:</h3>
                 <ul class="skills-more">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li>
+                        <div class="more-item">
+                            <div class="more-link">
+                                <a href="">basic knowledge of layout & design;</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="more-item">
+                            <div class="more-link">
+                                <a href="">working with JQuery, Bootstrap, Angular;</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="more-item">
+                            <div class="more-link">
+                                <a href="">working with Webpack, Gulp;</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="more-item">
+                            <div class="more-link">
+                                <a href="">working with AJAX, RAF;</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="more-item">
+                            <div class="more-link">
+                                <a href="">creating projects in OOP-style and own mini-library;</a>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
             </div>
             <div class="example">
@@ -154,35 +215,35 @@
                 <div class="container-example">
                     <code>
                         <pre>
-                            <span>JavaScript:</span>
-                            const postData = async (url, data) => {
-                                let res = await fetch(url, {
-                                    method: "POST",
-                                    body: data
-                                });
+            <span>JavaScript:</span>
+            const postData = async (url, data) => {
+            let res = await fetch(url, {
+                method: "POST",
+                body: data
+            });
 
-                                return await res.text();
-                            };
-                            <br>
-                            <br>
-                            <span>Javascript + HTML</span>
-                            function createCards(response) {
-                                    response.forEach(({src, title, link}) => {
-                                        let card = document.createElement('div');
+            return await res.text();
+            };
+            <br>
+            <br>
+            <span>Javascript + HTML</span>
+            function createCards(response) {
+                response.forEach(({src, title, link}) => {
+                    let card = document.createElement('div');
 
-                                        card.classList.add('animated', 'fadeInUp', 'col-sm-3', 'col-sm-offset-0', 'col-xs-10', 'col-xs-offset-1');
+                    card.classList.add('animated', 'fadeInUp', 'col-sm-3', 'col-sm-offset-0', 'col-xs-10', 'col-xs-offset-1');
 
-                                        card.innerHTML = `
-                                            &lt;div class="styles-block"&gt;
-                                                &lt;img src=${src} alt="style"&gt;
-                                                &lt;h4&gt;${title}&lt;/h4&gt;
-                                                &lt;a href=${link}>Подробнее&lt;/a&gt;
-                                            &lt;/div&gt;
-                                        `;
+                    card.innerHTML = `
+                        &lt;div class="styles-block"&gt;
+                            &lt;img src=${src} alt="style"&gt;
+                            &lt;h4&gt;${title}&lt;/h4&gt;
+                            &lt;a href=${link}>Подробнее&lt;/a&gt;
+                        &lt;/div&gt;
+                    `;
 
-                                        document.querySelector(wrapper).appendChild(card);
-                                    });
-                                }
+                    document.querySelector(wrapper).appendChild(card);
+                });
+            }
                         </pre>
                     </code>
                 </div>
@@ -193,29 +254,32 @@
         </div>
         <div class="language">
             <h2 class="language">Language</h2>
-            <div class="english">
-                <h3 class="language">My English</h3>
-                <p class="en">My English is not good...(A2) I can understand and read, as well as write in English, but it is still difficult for me to perceive speech by ear, since I am learning by myself and there is a little lack of immersion in a foreign language environment
-                    But I'll try to raise my level!</p>
-            </div>
-            <div class="germany">
-                <h3 class="language">My Germany</h3>
-                <p class="de">My German is much better - I can speak fluently with native speakers, which helps me in my work! I also read books freely and watch books in German. I have almost perfect grammatical and phonetic skills, as this is my specialty!</p>
+            <div class="type">
+                <div class="english">
+                    <h3 class="language">My English - A2</h3>
+                    <p class="en">My English is not good... I can understand and read, as well as write in English, but it is still difficult for me to perceive speech by ear, since I am learning by myself and there is a little lack of immersion in a foreign language environment
+                        But I'll try to raise my level!</p>
+                </div>
+                <div class="germany">
+                    <h3 class="language">My Germany - B2</h3>
+                    <p class="de">My German is much better - I can speak fluently with native speakers, which helps me in my work! I also read books freely and watch books in German. I have almost perfect grammatical and phonetic skills, as this is my specialty!</p>
+                </div>
             </div>
         </div>
       </section>
+    </main>
 
       <footer class="footer">
-        <div class="contsiner-footer">
-            <div class="rs-logo">
-                <img src="assets/imgs/logo.png" alt="logo" title="">
+        <div class="container">
+            <div class="foo-logo">
+                <a href="https://github.com/IrynaKrt"><img src="/assets/images/github.png" alt="logo" title="me github"></a>
             </div>
-            <div class="my-logo">
-                <img src="assets/imgs/logo.png" alt="logo" title="">
+            <div class="foo-logo">
+                <a href="https://app.rs.school/"><img src="/assets/images/i5sa3vi1hDE.jpg" alt="logo" title="rs-school"></a>
             </div>
-        </div>
-        <div class="jear">
-            <p class="jear">2022</p>
+            <div class="jear">
+                <p class="jear">©2022 IrynaKrt</p>
+            </div>
         </div>
       </footer>
 </body>
