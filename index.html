@@ -6,5 +6,217 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My CV</title>
 </head>
-<body></body>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="assets/imgs/logo.png" alt="logo">
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li class="menu-item">
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#cars">about me</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#price">contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+      </header>
+
+      <section class="basic-info">
+        <div class="container background">
+            <div class="prew-img">
+                <img src="" alt="me">
+                <img src="" alt="my soul">
+                <h1 class="name">Iryna Sittsava</h1>
+                <h2 class="status">Student & future full-stack developer</h2>
+            </div>
+            <div class="info-bio">
+                <h2 class="bio">BIO</h2>
+                <p class="bio">
+                My name is Irina, I'm 19 years old and my English is not that good...
+                By education I am a teacher of German, with level B2, but I became interested in another "language". And now for a little over 5 months I have been learning JavaScript!
+                Of my strengths, I can single out perseverance and diligence - which allows me not to quit my studies, even when it is very difficult! I am also an open, active and very sociable person.
+                I am ready to learn and learn new things, because I want to be useful!
+                </p>
+            </div>
+            <div class="info-contact">
+                <h3 class="contact">Contact</h3>
+                <ul class="contact">
+                    <li>
+                        <div class="edu-item">
+                            <img src="assets/imgs/gear.png" alt="Gear">
+                            <div>Привод</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="edu-item">
+                            <img src="assets/imgs/gear.png" alt="Gear">
+                            <div>Привод</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="edu-item">
+                            <img src="assets/imgs/gear.png" alt="Gear">
+                            <div>Привод</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="edu-item">
+                            <img src="assets/imgs/gear.png" alt="Gear">
+                            <div>Привод</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+      </section>
+
+      <section class="prof-info">
+        <div class="container">
+            <div class="education">
+                <h2 class="education">Education</h2>
+                <ul class="education">
+                    <li>
+                        <div class="edu-item">
+                            <img src="assets/imgs/gear.png" alt="Gear">
+                            <div>Привод</div>
+                            <div>{{car.gear}}</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="edu-item">
+                            <img src="assets/imgs/gear.png" alt="Gear">
+                            <div>Привод</div>
+                            <div>{{car.gear}}</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="edu-item">
+                            <img src="assets/imgs/gear.png" alt="Gear">
+                            <div>Привод</div>
+                            <div>{{car.gear}}</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="edu-item">
+                            <img src="assets/imgs/gear.png" alt="Gear">
+                            <div>Привод</div>
+                            <div>{{car.gear}}</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="skills">
+                <h2 class="skills">Skills</h2>
+                <ul class="skills">
+                    <li>
+                        <div class="edu-item">
+                            <img src="assets/imgs/gear.png" alt="Gear">
+                            <div>Привод</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="edu-item">
+                            <img src="assets/imgs/gear.png" alt="Gear">
+                            <div>Привод</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="edu-item">
+                            <img src="assets/imgs/gear.png" alt="Gear">
+                            <div>Привод</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="edu-item">
+                            <img src="assets/imgs/gear.png" alt="Gear">
+                            <div>Привод</div>
+                        </div>
+                    </li>
+                </ul>
+                <h3 class="skills-more">And too:</h3>
+                <ul class="skills-more">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="example">
+                <h2 class="example">For example</h2>
+                <div class="container-example">
+                    <code>
+                        <pre>
+                            <span>JavaScript:</span>
+                            const postData = async (url, data) => {
+                                let res = await fetch(url, {
+                                    method: "POST",
+                                    body: data
+                                });
+
+                                return await res.text();
+                            };
+                            <br>
+                            <br>
+                            <span>Javascript + HTML</span>
+                            function createCards(response) {
+                                    response.forEach(({src, title, link}) => {
+                                        let card = document.createElement('div');
+
+                                        card.classList.add('animated', 'fadeInUp', 'col-sm-3', 'col-sm-offset-0', 'col-xs-10', 'col-xs-offset-1');
+
+                                        card.innerHTML = `
+                                            &lt;div class="styles-block"&gt;
+                                                &lt;img src=${src} alt="style"&gt;
+                                                &lt;h4&gt;${title}&lt;/h4&gt;
+                                                &lt;a href=${link}>Подробнее&lt;/a&gt;
+                                            &lt;/div&gt;
+                                        `;
+
+                                        document.querySelector(wrapper).appendChild(card);
+                                    });
+                                }
+                        </pre>
+                    </code>
+                </div>
+            </div>
+        </div>
+        <div class="experience">
+            <h3 class="experience">I don't have any work experience yet, but I would like to try to work in a team and see how this process really happens!</h3>
+        </div>
+        <div class="language">
+            <h2 class="language">Language</h2>
+            <div class="english">
+                <h3 class="language">My English</h3>
+                <p class="en">My English is not good...(A2) I can understand and read, as well as write in English, but it is still difficult for me to perceive speech by ear, since I am learning by myself and there is a little lack of immersion in a foreign language environment
+                    But I'll try to raise my level!</p>
+            </div>
+            <div class="germany">
+                <h3 class="language">My Germany</h3>
+                <p class="de">My German is much better - I can speak fluently with native speakers, which helps me in my work! I also read books freely and watch books in German. I have almost perfect grammatical and phonetic skills, as this is my specialty!</p>
+            </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="contsiner-footer">
+            <div class="rs-logo">
+                <img src="assets/imgs/logo.png" alt="logo" title="">
+            </div>
+            <div class="my-logo">
+                <img src="assets/imgs/logo.png" alt="logo" title="">
+            </div>
+        </div>
+        <div class="jear">
+            <p class="jear">2022</p>
+        </div>
+      </footer>
+</body>
 </html>
