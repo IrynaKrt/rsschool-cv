@@ -282,11 +282,13 @@ main {
   display: flex;
   height: 100px;
   width: 400px;
-  padding: 10px 25px;
+  padding: 20px 80px;
   margin: 20px auto;
   margin-left: 0 auto;
   border: 1px solid #000;
   background-color: #000;
+  color:#fff;
+  font-size: 45px;
   border-radius: 15px;
   cursor: pointer;
   font-weight: 400;
@@ -295,6 +297,32 @@ main {
   font-size: 30px;
   line-height: 1.5;
   transition: all 0.2s;
+}
+
+.example-close {
+  position: absolute;
+  top: -5rem;
+  right: -1.5rem;
+  font-size: 5rem;
+  width: 5rem;
+  height: 5rem;
+  line-height: 5rem;
+  text-align: center;
+  background: transparent;
+  color: #000;
+  border: none;
+}
+
+.example-modal {
+  position: fixed;
+  text-align: left;
+  max-width: 900px;
+  left: 50%;
+  top: 10%;
+  background-color: #474747;
+  color:antiquewhite;
+  border-radius: 4px;
+  padding: 20px 15px;
 }
 
 .btn-example:hover {
@@ -364,7 +392,7 @@ div .english {
 }
 
 .inner {
-  position: relative;
+  position: static;
   z-index: 3;
   color: #fff;
   text-align: center;
