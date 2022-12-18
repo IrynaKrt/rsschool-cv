@@ -25,11 +25,11 @@
                     <li class="menu-item">
                         <a href="#" title="Скоро появится модальное окно! А пока - тык по ссылочке;)">Home</a>
                     </li>
-                    <li class="menu-item">
-                        <a href="#basic" title="Скоро появится модальное окно! А пока - тык по ссылочке;)">About me</a>
+                    <li class="menu-item bio">
+                        <a href="#basic" class="bio" title="Скоро появится модальное окно! А пока - тык по ссылочке;)">About me</a>
                     </li>
-                    <li class="menu-item">
-                        <a href="#contact" title="Скоро появится модальное окно! А пока - тык по ссылочке;)">Contact</a>
+                    <li class="menu-item contact">
+                        <a href="#contact" class="contact" title="Скоро появится модальное окно! А пока - тык по ссылочке;)">Contact</a>
                     </li>
                 </ul>
             </nav>
@@ -240,51 +240,55 @@
                 </div>
                 <div class="example">
                     <h2 class="example">For example:</h2>
-                                <!-- <div class="container-example">
-                        <code>
-                            <pre>
-                <span>JavaScript:</span>
-                const postData = async (url, data) => {
-                let res = await fetch(url, {
-                    method: "POST",
-                    body: data
-                });
-
-                return await res.text();
-                };
-                <br>
-                <br>
-                <span>Javascript + HTML</span>
-                function createCards(response) {
-                    response.forEach(({src, title, link}) => {
-                        let card = document.createElement('div');
-
-                        card.classList.add('animated', 'fadeInUp', 'col-sm-3', 'col-sm-offset-0', 'col-xs-10', 'col-xs-offset-1');
-
-                        card.innerHTML = `
-                            &lt;div class="styles-block"&gt;
-                                &lt;img src=${src} alt="style"&gt;
-                                &lt;h4&gt;${title}&lt;/h4&gt;
-                                &lt;a href=${link}>Подробнее&lt;/a&gt;
-                            &lt;/div&gt;
-                        `;
-
-                        document.querySelector(wrapper).appendChild(card);
-                    });
-                }
-                            </pre>
-                        </code>
-                    </div> -->
-                    <div class="btn-example" title="Скоро появится модальное окно! А пока - тык по кнопочке;)">
+                    <button class="btn-example">You find here &hearts;</button>
+                    <!-- <div class="btn-example" title="Скоро появится модальное окно! А пока - тык по кнопочке;)">
                         <a href="https://github.com/IrynaKrt">You find here &hearts;</a>
-                    </div> <!--пока что просто ссылка на Github - позже планирую заменить модальным окном -->
+                    </div> пока что просто ссылка на Github - позже планирую заменить модальным окном -->
                 </div>
                 <div class="experience">
-                    <h3 class="experience"><span style="font-size: 20px;">P.S.</span> I don't have any work experience yet, but I would like to try to work in a team and see how this process really happens!</h3>
+                    <h3 class="experience"><span style="font-size: 20px;">P.S.</span> I don't have any work experience yet, but<br>I would like to try to work in a team and see how this process really happens!</h3>
                 </div>
             </div>
         </section>
     </main>
+
+    <div class="example-modal" data-modal>
+        <div class="container-example">
+            <button class="example-close">&times;</button>
+            <code>
+                <pre>
+    <span>JavaScript:</span>
+    const postData = async (url, data) => {
+    let res = await fetch(url, {
+        method: "POST",
+        body: data
+    });
+
+    return await res.text();
+    };
+    <br>
+    <span>Javascript + HTML</span>
+    function createCards(response) {
+        response.forEach(({src, title, link}) => {
+            let card = document.createElement('div');
+
+            card.classList.add('animated', 'fadeInUp', 'col-sm-3', 'col-sm-offset-0', 'col-xs-10', 'col-xs-offset-1');
+
+            card.innerHTML = `
+                &lt;div class="styles-block"&gt;
+                    &lt;img src=${src} alt="style"&gt;
+                    &lt;h4&gt;${title}&lt;/h4&gt;
+                    &lt;a href=${link}>Подробнее&lt;/a&gt;
+                &lt;/div&gt;
+            `;
+
+            document.querySelector(wrapper).appendChild(card);
+        });
+    }
+                </pre>
+            </code>
+    </div>
+    </div>
 
     <footer class="footer">
         <div class="container">
@@ -292,12 +296,13 @@
                 <a href="https://github.com/IrynaKrt"><img src="assets/images/github.png" alt="logo" title="me github"></a>
             </div>
             <div class="foo-logo">
-                <a href="https://rs.school/js/"><img src="assets/images/i5sa3vi1hDE.jpg" width="100" height="30" alt="logo" title="rs-school"></a>
+                <a href="https://rs.school/js/"><img src="assets/images/i5sa3vi1hDE.jpg" width="50" height="30" alt="logo" title="rs-school"></a>
             </div>
             <div class="jear">
                 <p class="jear">©2022 IrynaKrt</p>
             </div>
         </div>
     </footer>
+    <script src="js/index.js"></script>
 </body>
 </html>
