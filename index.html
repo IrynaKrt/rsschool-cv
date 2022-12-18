@@ -256,38 +256,38 @@
         <div class="container-example">
             <button class="example-close">&times;</button>
             <code>
-                <pre>
-    <span>JavaScript:</span>
-    const postData = async (url, data) => {
-    let res = await fetch(url, {
-        method: "POST",
-        body: data
-    });
+            <pre>
+                <span>JavaScript:</span>
+                const postData = async (url, data) => {
+                let res = await fetch(url, {
+                    method: "POST",
+                    body: data
+                });
 
-    return await res.text();
-    };
-    <br>
-    <span>Javascript + HTML</span>
-    function createCards(response) {
-        response.forEach(({src, title, link}) => {
-            let card = document.createElement('div');
+                return await res.text();
+                };
+                <br>
+                <span>Javascript + HTML</span>
+                function createCards(response) {
+                    response.forEach(({src, title, link}) => {
+                        let card = document.createElement('div');
 
-            card.classList.add('animated', 'fadeInUp', 'col-sm-3', 'col-sm-offset-0', 'col-xs-10', 'col-xs-offset-1');
+                        card.classList.add('animated', 'fadeInUp', 'col-sm-3', 'col-sm-offset-0', 'col-xs-10', 'col-xs-offset-1');
 
-            card.innerHTML = `
-                &lt;div class="styles-block"&gt;
-                    &lt;img src=${src} alt="style"&gt;
-                    &lt;h4&gt;${title}&lt;/h4&gt;
-                    &lt;a href=${link}>Подробнее&lt;/a&gt;
-                &lt;/div&gt;
-            `;
+                        card.innerHTML = `
+                            &lt;div class="styles-block"&gt;
+                                &lt;img src=${src} alt="style"&gt;
+                                &lt;h4&gt;${title}&lt;/h4&gt;
+                                &lt;a href=${link}>Подробнее&lt;/a&gt;
+                            &lt;/div&gt;
+                        `;
 
-            document.querySelector(wrapper).appendChild(card);
-        });
-    }
-                </pre>
+                        document.querySelector(wrapper).appendChild(card);
+                    });
+                }
+            </pre>
             </code>
-    </div>
+        </div>
     </div>
 
     <footer class="footer">
