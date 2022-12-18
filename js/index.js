@@ -1,4 +1,6 @@
 window.addEventListener('DOMContentLoaded', () => {
+
+    //Modal
     function bindModal(triggerSelector, modalSelector, closeSelector, destroy = false) {
         const trigger = document.querySelectorAll(triggerSelector),
               modal = document.querySelector(modalSelector),
@@ -10,29 +12,22 @@ window.addEventListener('DOMContentLoaded', () => {
 
         modal.addEventListener('click', (e) => {
             if (e.target === modal) {
-                windows.forEach(item => {
-                    item.style.display = 'none';
-                });
 
                 modal.style.display = "none";
                 document.body.style.overflow = "";
                 document.body.style.marginRight = `0px`;
             }
         });
+
         trigger.forEach(item => {
             item.addEventListener('click', (e) => {
                 if (e.target) {
                     e.preventDefault();
                 }
 
-                if(destroy) { // удаление элемента со страницы
+                if(destroy) {
                     item.remove();
                 }
-
-                windows.forEach(item => {
-                    item.style.display = 'none';
-                    item.classList.add('animated', 'fadeIn'); // ссс анимация!
-                });
     
                 modal.style.display = "block";
                 document.body.style.overflow = "hidden";
@@ -42,10 +37,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
         close.addEventListener('click', () => {
             windows.forEach(item => {
+                item.classList.add('hidden');
                 item.style.display = 'none';
+                item.classList.remove('hidden');
             });
-
-            modal.style.display = "none";
             document.body.style.overflow = "";
             document.body.style.marginRight = `0px`;
         });
@@ -67,4 +62,18 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     bindModal('.btn-example', '.example-modal', '.example-modal .example-close');
+
+    //Scroll
+    const linkProf = document.querySelector('.menu-item .bio'),
+          linkContact = document.querySelector('.menu-item .contact');
+
+    linkProf.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.getElementById('#basis').scrollIntoView({behavior: 'smooth'});
+    });
+
+    linkContact.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.getElementById('#contact').scrollIntoView({behavior: 'smooth'});
+    });
 });

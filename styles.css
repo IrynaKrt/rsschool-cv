@@ -3,6 +3,7 @@
   padding: 0;
   margin: 0;
   font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
@@ -19,15 +20,20 @@
   }
 }
 
-@keyframes move {
-  0% {
-    margin-top: 20px;
-  }
-  50% {
-    margin-top: 170px;
+@keyframes show{
+  0%{
+    opacity:0;
   }
   100% {
-    margin-top: 20px;
+    opacity:1;
+  }
+}
+@keyframes hidden{
+  0%{
+    opacity:1;
+  }
+  100% {
+    opacity:0;
   }
 }
 
@@ -313,6 +319,10 @@ main {
   border: none;
 }
 
+.example-modal .hidden {
+  animation: hidden 1s 1;
+}
+
 .example-modal {
   position: fixed;
   text-align: left;
@@ -323,6 +333,8 @@ main {
   color:antiquewhite;
   border-radius: 4px;
   padding: 20px 15px;
+  animation: show 1s 1;
+  animation-fill-mode: forwards;
 }
 
 .btn-example:hover {
