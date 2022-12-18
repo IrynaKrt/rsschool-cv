@@ -1,0 +1,415 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+@keyframes background-change {
+  0% {
+    border: 5px solid #000;
+  }
+  50% {
+    border: 5px solid rgba(255, 255, 255, 0.5);
+  }
+  100% {
+    border: 5px solid #000;
+  }
+}
+
+@keyframes move {
+  0% {
+    margin-top: 20px;
+  }
+  50% {
+    margin-top: 170px;
+  }
+  100% {
+    margin-top: 20px;
+  }
+}
+
+header {
+  background-color: #000;
+  color: #fff;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.logo img {
+  margin-left: 60px;
+  vertical-align: bottom;
+}
+
+.menu {
+  margin-left: 280px;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  margin-left: 170px;
+}
+
+.menu-item {
+  margin-right: 115px;
+}
+
+.menu-item a {
+  font-size: 30px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.menu-item a:hover {
+  color: rgb(18, 124, 41);
+}
+
+main {
+  display: flex;
+}
+
+.basic-info {
+  margin-left: 60px;
+  max-width: 500px;
+  min-height: 100vh;
+  display: flex;
+  background-color: #000;
+  color: #fff;
+}
+
+.prew-img  .me {
+  display:flex;
+  margin: 20px 50px;
+  width: 400px;
+  height: 400px;
+}
+
+.prew-img .me img {
+  width: 100%;
+  height: 100%;
+}
+
+.name {
+  margin-left: 25px;
+  font-size: 56px;
+  line-height: 60px;
+}
+.status {
+  margin: 15px 20px 60px;
+  text-align: center;
+}
+
+.bio h2 {
+  max-width: 490px;
+  text-align: center;
+  font-size: 200%;
+  animation: background-change 7s infinite;
+  margin-left: 5px;
+  margin-right: 10px;
+  margin-bottom: 30px;
+  border: 3px solid #000;
+  line-height: 130%;
+}
+
+.info-bio  p {
+  text-align: justify;
+  font-size: 25px;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 20px;
+  line-height: 30px;
+}
+
+.info-contact h3 {
+  text-align: left;
+  font-size: 40px;
+  margin: 100px 15px 25px 30px;
+}
+
+.info-contact ul {
+  list-style: none;
+  margin-left: 30px;
+}
+
+.contact-item {
+  display: flex;
+  margin-bottom: 30px;
+  margin-left: 20px;
+  font-size: 20px;
+  /* animation: move 3s infinite; */
+}
+
+/* .info-contact:hover .contact-item{
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -o-animation-play-state: paused;
+  animation-play-state: paused;
+} */
+
+.item-link a {
+  margin-left: 15px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.item-link a:hover {
+  color: rgb(18, 124, 41);
+}
+
+.prof-info {
+  margin: 50px 0 0 40px;
+}
+
+.education h2 {
+  font-size: 40px;
+  border-bottom: 5px solid #000;
+  max-width: 1440px;
+}
+
+.education ul {
+  display: flex;
+  list-style: none;
+  max-width: 100%;
+}
+
+.education .edu-item {
+  display: block;
+  margin: 30px 0 30px 110px;
+  max-width:250px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.education .edu-item img {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.education span {
+  font-size: 15px;
+  margin-bottom: 40px;
+}
+
+.skills h2 {
+  margin-top: 40px;
+  display: flex;
+  font-size: 40px;
+  border-bottom: 5px solid #000;
+  max-width: 100%;
+}
+
+.skills ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+}
+
+.skills .skill-item {
+  display: flex;
+  margin: 30px 45px 15px 55px;
+  max-width: 400px;
+  font-size: 20px;
+}
+
+.skill-item img {
+  max-width: 150px;
+  max-height: 150px;
+  margin-left: 40px;
+}
+
+.skills-more h3 {
+  border: 5px solid #000;
+  border-radius: 15%;
+  padding: 5px 12px;
+  max-width: 200px;
+  font-size: 30px;
+  margin-top: 20px;
+  margin-left: 550px;
+}
+
+
+.skills-more ul {
+  margin-left: 350px;
+  display: block;
+  font-size: 25px;
+  list-style: none;
+}
+
+.skills-more .more-item {
+  display: flex;
+  margin: 20px 0 2px 30px;
+}
+
+.skills-more .wait .more-link {
+  margin-left: 25px;
+}
+
+.more-link {
+  margin-left: 15px;
+}
+
+.more-link a {
+  margin-right: 30px;
+  text-decoration: none;
+  color: #000;
+}
+
+.more-link a:hover {
+  color: rgb(2, 245, 55);
+}
+
+.example h2 {
+  font-size: 40px;
+  border-bottom: 5px solid #000;
+  max-width: 1440px;
+}
+
+/* .example .container-example {
+  margin-top: 20px;
+  font-size: 18px;
+} */
+
+.example .btn-example {
+  display: flex;
+  height: 100px;
+  width: 400px;
+  padding: 10px 25px;
+  margin: 15px 0 30px 500px;
+  border: 1px solid #000;
+  background-color: #000;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 30px;
+  line-height: 1.5;
+  transition: all 0.2s;
+}
+
+.btn-example:hover {
+  background-color: rgb(48, 48, 48);
+}
+
+.btn-example a {
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  font-size: 45px;
+}
+
+.btn-example a:hover {
+  color: rgb(2, 245, 55);
+}
+
+.example span {
+  color: brown;
+  font-size: 18px;
+}
+
+.experience h3 {
+  margin: 20px 5px;
+  padding: 5px;
+  font-size: 20px;
+  font-style: oblique;
+  border: 5px solid #000;
+  border-radius: 15%;
+  text-align: center;
+  max-width: 1440px;
+  text-align: center;
+  line-height: 27px;
+}
+
+.language h2 {
+  margin: 15px 0;
+  font-size: 40px;
+  border-bottom: 5px solid #000;
+  max-width: 1440px;
+}
+
+.language .type {
+  display: flex;
+  max-width: 1400px;
+}
+
+.type .english   {
+  border-style: dashed;
+  text-align: center;
+  margin-left: 140px;
+  margin-right: 100px;
+  margin-bottom: 20px;
+}
+
+div .english {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+    url(assets/gif/british-flag-13.webp);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.inner {
+  position: relative;
+  z-index: 3;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+.type .germany   {
+  border-style: double;
+  text-align: center;
+  margin-right: 0px;
+  margin-bottom: 20px;
+}
+
+div .germany {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+    url(assets/gif/german-flag-7.webp);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.language  h3 {
+  margin: 5px 0 10px;
+  font-size: 30px;
+}
+
+.language p {
+  text-align: justify;
+  padding: 10px 20px;
+  font-size: 20px;
+  color:#fff;
+}
+
+footer {
+  background-color: #000;
+  color: #fff;
+  max-height: 80px;
+}
+
+.footer .container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+
+}
+
+.foo-logo img {
+  margin-left: 500px;
+  vertical-align: bottom;
+  max-width: 50px;
+  max-height: 50px;
+}
+
+.jear {
+  margin-left: 250px;
+}
