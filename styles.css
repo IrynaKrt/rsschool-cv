@@ -4,6 +4,7 @@
   margin: 0;
   font-family: 'Montserrat', sans-serif;
   scroll-behavior: smooth;
+
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
@@ -81,6 +82,7 @@ header {
 main {
   display: flex;
   max-width: 1903px;
+  max-height: 1846px;
 }
 
 .basic-info {

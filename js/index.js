@@ -1,5 +1,4 @@
 window.addEventListener('DOMContentLoaded', () => {
-
     //Modal
     function bindModal(triggerSelector, modalSelector, closeSelector, destroy = false) {
         const trigger = document.querySelectorAll(triggerSelector),
@@ -39,7 +38,6 @@ window.addEventListener('DOMContentLoaded', () => {
             windows.forEach(item => {
                 item.classList.add('hidden');
                 item.style.display = 'none';
-                item.classList.remove('hidden');
             });
             document.body.style.overflow = "";
             document.body.style.marginRight = `0px`;
