@@ -81,6 +81,7 @@ header {
 main {
   display: flex;
   max-width: 1903px;
+  max-height: 1846px;
 }
 
 .basic-info {
