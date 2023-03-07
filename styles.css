@@ -38,6 +38,16 @@
   }
 }
 
+@keyframes showRight {
+  from {right:-200%;}
+  to {right:0;}
+}
+
+@keyframes hideRight {
+  from {right: 0;}
+  to {right: -250%;}
+}
+
 header {
   background-color: #000;
   color: #fff;
@@ -718,7 +728,74 @@ footer {
   }
 
   .burger-menu {
+    z-index: 20;
+    position: fixed;
     display: none;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 380px;
+    background-color:#fff;
+  }
+
+  .burger-menu .close{
+    position: fixed;
+    display: block;
+    font-size: 80px;
+    padding: 0;
+    margin: 0;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    background: transparent;
+    color: #000;
+    border: none;
+    cursor: pointer;
+  }
+
+  .burger-menu ul.menu-list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    row-gap: 20px;
+    margin: 100px 50px;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .burger-menu ul.menu-list>li {
+    width: 380px;
+    height: 20px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .burger-menu li>a.burger-item {
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+  }
+
+  .burger-menu li:hover {
+    transition: all 0.2s ease;
+  }
+
+  .burger-menu a.burger-item:hover {
+    color: rgba(43, 158, 9, 0.7);
+    font-weight: 700;
+  }
+
+  .burger-menu a.burger-item.active {
+    color: rgba(43, 158, 9, 0.7);
+    font-weight: 700;
   }
 
   .menu {
@@ -905,14 +982,15 @@ footer {
 
   .example{
     width: 283px;
+    margin: 20px 0;
   }
 
   .example h2 {
     font-size: 30px;
     border-bottom: 5px solid #000;
     max-width: 320px;
+    margin: 20px 0;
   }
-
 
   .example .btn-example {
     display: flex;
@@ -920,6 +998,7 @@ footer {
     width: 200px;
     padding: 5px 10px;
     font-size: 23px;
+    margin: 0 0 0 40px;
   }
 
   .example-modal .hidden {
@@ -927,6 +1006,7 @@ footer {
   }
 
   .example-modal {
+    display: none;
     left: 5%;
     top: 40%;
     padding: 10px 5px;
@@ -945,7 +1025,8 @@ footer {
     font-size: 15px;
     max-width: 786px;
     line-height: 20px;
-  }
+    margin: 20px 0;
+   }
 
   .experience h3 span {
     font-size: 10px;
