@@ -1,1 +1,1 @@
-https://IrynaKrt.github.io/rsschool-cv/
+https://Irynakrt.github.io/rsschool-cv/
