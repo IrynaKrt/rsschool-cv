@@ -32,7 +32,20 @@
                         <a href="#contact" class="contact" title="Скоро появится модальное окно! А пока - тык по ссылочке;)">Contact</a>
                     </li>
                 </ul>
+                <button class="btn-burger"><img src="assets/images/burger.png" alt="burger" width="50" height="50"></button>
+                <div class="burger-menu">
+                    <button class="close">&times;</button>
+                    <ul class="menu-list">
+                        <li><a href="#about" class="burger-item active">About&nbsp;me</a></li>
+                        <li><a href="#contact" class="burger-item">Contacs</a></li>
+                        <li><a href="#education" class="burger-item">Education</a></li>
+                        <li><a href="#skills" class="burger-item">Skills</a></li>
+                        <li><a href="#language" class="burger-item">Language</a></li>
+                        <li><a href="#expirience" class="burger-item">Expirience</a></li>
+                    </ul>
+                </div>
             </nav>
+
         </div>
       </header>
 
@@ -272,8 +285,7 @@
                     response.forEach(({src, title, link}) => {
                         let card = document.createElement('div');
 
-                        card.classList.add('animated', 'fadeInUp', 'col-sm-3', 'col-sm-offset-0', 'col-xs-10', 'col-xs-offset-1');
-
+                        card.classList.add('animated', 'fadeInUp', 'col-sm-3');
                         card.innerHTML = `
                             &lt;div class="styles-block"&gt;
                                 &lt;img src=${src} alt="style"&gt;
@@ -295,7 +307,7 @@
             <div class="foo-logo">
                 <a href="https://github.com/IrynaKrt"><img src="assets/images/github.png" alt="logo" title="me github"></a>
             </div>
-            <div class="foo-logo">
+            <div class="foo-logo rs">
                 <a href="https://rs.school/js/"><img src="assets/images/i5sa3vi1hDE.jpg" width="50" height="30" alt="logo" title="rs-school"></a>
             </div>
             <div class="jear">

@@ -11,7 +11,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
         modal.addEventListener('click', (e) => {
             if (e.target === modal) {
-
                 modal.style.display = "none";
                 document.body.style.overflow = "";
                 document.body.style.marginRight = `0px`;
