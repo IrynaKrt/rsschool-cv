@@ -299,7 +299,6 @@ main {
   max-width: 1440px;
 }
 
-
 .example .btn-example {
   display: flex;
   height: 100px;
@@ -341,6 +340,7 @@ main {
 }
 
 .example-modal {
+  display: none;
   position: fixed;
   text-align: left;
   max-width: 900px;
