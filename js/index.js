@@ -48,7 +48,7 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-    bindBurger('.btn-burger', '.btn-burger>img', '.burger-menu', '.burger-item', '.burger-menu .close')
+    bindBurger('.btn-burger', '.img-burger', '.burger-menu', '.burger-item', '.burger-menu .close')
 
     //Modal
     function bindModal(triggerSelector, modalSelector, closeSelector, destroy = false) {
