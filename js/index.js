@@ -1,14 +1,4 @@
 window.addEventListener('DOMContentLoaded', () => {
-    const linkProf = document.querySelector('.menu-item .bio'),
-          linkContact = document.querySelector('.menu-item .contact');
-
-    linkProf.addEventListener('click', () => {
-        document.getElementById('#basis').scrollIntoView({behavior: 'smooth'});
-    });
-
-    linkContact.addEventListener('click', () => {
-        document.getElementById('#contact').scrollIntoView({behavior: 'smooth'});
-    });
 
     //Burger
     function bindBurger(btnSelector, imgSelector, menuSelector, linkSelector, closeSelector) {
