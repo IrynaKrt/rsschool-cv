@@ -4,7 +4,11 @@
   margin: 0;
   font-family: 'Montserrat', sans-serif;
   scroll-behavior: smooth;
+}
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
@@ -38,20 +42,13 @@
   }
 }
 
-@keyframes showRight {
-  from {right:-200%;}
-  to {right:0;}
-}
-
-@keyframes hideRight {
-  from {right: 0;}
-  to {right: -250%;}
-}
-
 header {
   background-color: #000;
   color: #fff;
-  min-width: 1903px;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
 }
 
 .header .container {
@@ -70,7 +67,9 @@ header {
 }
 
 .burger-menu {
-  display: none;
+  width: 0;
+  overflow: hidden;
+  transition: width 500ms ease-in-out;
 }
 
 .menu {
@@ -99,6 +98,7 @@ header {
 
 main {
   display: flex;
+  margin-top: 75px;
   max-width: 1903px;
   max-height: 1846px;
 }
@@ -208,7 +208,8 @@ main {
 }
 
 .education .edu-item {
-  display: block;
+  display: flex;
+  flex-direction: column;
   margin: 30px 60px;
   max-width:250px;
   text-align: center;
@@ -330,6 +331,9 @@ main {
   line-height: 5rem;
   text-align: center;
   background: transparent;
+    -webkit-text-stroke: 1px antiquewhite; /* Толщина и цвет обводки */
+  text-stroke: 1px antiquewhite;
+  border-color: #474747;
   color: #000;
   border: none;
   cursor: pointer;
@@ -459,7 +463,6 @@ footer {
   background-color: #000;
   color: #fff;
   max-height: 80px;
-  min-width: 1903px;
 }
 
 .footer .container {
@@ -480,20 +483,13 @@ footer {
   margin-left: 450px;
 }
 
-@media screen and (max-width: 1400px) and (min-width: 768px) {
-  header {
-    min-width: 1440px;
-  }
+@media screen and (max-width: 1400px) and (min-width: 769px) {
 
   .logo img {
     margin-left: 50px;
   }
 
   .btn-burger {
-    display: none;
-  }
-
-  .burger-menu {
     display: none;
   }
 
@@ -706,13 +702,17 @@ footer {
     margin-left: 250px;
   }
 }
-@media screen and (max-width: 760px) and (min-width: 320px) {
-  header {
-    min-width: 320px;
+@media screen and (max-width: 768px) {
+
+  header .container {
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    padding: 16px 0 !important;
   }
 
   .logo img {
-    margin-left: 7px;
+    margin-left: 0;
   }
 
   .btn-burger {
@@ -730,19 +730,17 @@ footer {
   .burger-menu {
     z-index: 20;
     position: fixed;
-    display: none;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    width: 100vw;
     height: 380px;
     background-color:#fff;
   }
 
   .burger-menu .close{
     position: fixed;
-    display: block;
+    display: none;
     font-size: 80px;
     padding: 0;
     margin: 0;
@@ -808,89 +806,112 @@ footer {
 
   main {
     display: block;
-    max-width: 320px;
+    margin-top: 80px;
+    max-width: 100%;
     max-height: 4500px;
   }
 
   .basic-info {
    margin: 0 auto;
-    max-width: 290px;
+    max-width: 100%;
     min-height: 100vh;
   }
 
+    .basic-info .container {
+      margin: 0 auto;
+      width: 100%;
+    }
+
   .prew-img  .me {
-    margin: 20px;
     width: 250px;
     height: 250px;
+    margin: 20px auto;
   }
 
   .name {
     font-size: 30px;
     line-height: 50px;
-    margin-left: 20px;
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
   }
 
   .status {
     font-size: 25px;
-    width: 270px;
+    width: 100%;
     margin: 15px auto 25px;
   }
 
-  .bio h2 {
+  div.bio h2 {
     font-size: 150%;
     line-height: 130%;
-    width: 270px;
+    max-width: 100%;
+    width: 90%;
+    margin: 0 auto 20px;
   }
   .info-bio{
-    width: 290px;
-    margin: 0;
+    width: 100%;
+    margin: 0 auto ;
   }
 
   .info-bio  p {
     text-align: justify;
     font-size: 15px;
-    margin-left: 10px;
-    margin-right: 0;
-    margin-top: 5px;
+    margin: 5px auto 0;
     line-height: 26px;
-    width: 270px;
+    max-width: 90%;
+  }
+
+  .info-contact {
+    max-width: 90%;
+    margin: 0 auto;
   }
 
   .info-contact h3 {
     font-size: 20px;
-    margin: 70px 15px 25px 30px;
+    margin: 70px 0 25px;
   }
 
   .info-contact ul {
-    margin-left: 20px;
+    width: 100%;
+    margin-left: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 95px;
   }
 
   .contact-item {
     display: flex;
     margin-bottom: 30px;
-    margin-left: 20px;
+    margin-left: 0;
     font-size: 18px;
     /* animation: move 3s infinite; */
   }
 
   .prof-info {
-    margin: 30px 0 0 20px;
+    margin: 30px  0 0;
+  }
+
+  .prof-info .container {
+    width: 90%;
+    margin: 0 auto;
   }
 
   .education {
-    width: 283px;
+    width: 100%;
   }
 
   .education h2 {
     font-size: 30px;
-    max-width: 320px;
+    max-width: 100%;
   }
 
   .education ul {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    max-width: 100%;
+    width: 100%;
+    justify-content: space-between;
     margin: 0;
     padding: 0;
   }
@@ -917,7 +938,7 @@ footer {
   }
 
   .skills {
-    width: 283px;
+    width: 100%;
   }
 
   .skills h2 {
@@ -928,6 +949,8 @@ footer {
 
   .skills ul {
     display: flex;
+    width: 100%;
+    justify-content: space-between;
   }
 
   .skills .skill-item {
@@ -940,29 +963,29 @@ footer {
   .skill-item img {
     max-width: 50px;
     max-height: 50px;
-    margin-left: 12px;
+    margin-left: 0;
   }
 
   .skills-more h3 {
     border: 5px solid #000;
     border-radius: 15%;
     padding: 5px 12px;
-    max-width: 120px;
-    font-size: 15px;
-    margin-top: 10px;
-    margin-left: 75px;
-    margin-bottom: 20px;
+    max-width: 180px;
+    font-size: 25px;
+     margin: 10px auto 20px;
   }
 
   .skills-more ul {
     margin: 0;
     font-size: 13px;
     padding: 0;
+    width: 100%;
   }
 
   .skills-more .more-item {
     display: flex;
-    margin: 10px 0 2px 10px;
+    margin: 10px 0 2px;
+    font-size: 15px;
   }
 
   .skills-more .more-item img {
@@ -980,15 +1003,19 @@ footer {
     margin-left: 17px;
   }
 
+  .more-link a {
+    margin-right: 0;
+  }
+
   .example{
-    width: 283px;
+    width: 100%;
     margin: 20px 0;
   }
 
   .example h2 {
     font-size: 30px;
     border-bottom: 5px solid #000;
-    max-width: 320px;
+    max-width: 100%;
     margin: 20px 0;
   }
 
@@ -998,7 +1025,7 @@ footer {
     width: 200px;
     padding: 5px 10px;
     font-size: 23px;
-    margin: 0 0 0 40px;
+    margin: 0 auto;
   }
 
   .example-modal .hidden {
@@ -1008,22 +1035,27 @@ footer {
   .example-modal {
     display: none;
     left: 5%;
-    top: 40%;
+    top: 15%;
     padding: 10px 5px;
-    font-size: 8px;
+    font-size: 15px;
+    width: 90%;
   }
   .example span {
     color: brown;
-    font-size: 10px;
+    font-size: 20px;
+  }
+
+  .container-example code {
+    position: relative;
   }
 
   .experience{
-    max-width: 283px;
+    max-width: 100%;
     padding: 0;
   }
   .experience h3 {
     font-size: 15px;
-    max-width: 786px;
+    max-width: 100%;
     line-height: 20px;
     margin: 20px 0;
    }
@@ -1033,20 +1065,22 @@ footer {
   }
 
   .language {
-    width: 283px;
+    width: 100%;
   }
 
   .language h2 {
     margin: 25px 0;
     font-size: 30px;
     border-bottom: 5px solid #000;
-    max-width: 320px;
+    max-width: 100%;
   }
 
   .language .type {
     display: flex;
-    flex-wrap: wrap;
-    max-width: 320px;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 100%;
     padding: 10px 0;
   }
 
@@ -1056,20 +1090,24 @@ footer {
     color: #fff;
     text-align: center;
     padding: 5px;
-    max-width: 275px;
+    max-width: 100%;
   }
 
   .language  h3 {
     margin: 5px 0 0;
-    font-size: 15px;
+    font-size: 25px;
     text-align: center;
-    max-width: 265px;
+    max-width: 100%;
+  }
+
+  .type .english {
+    margin: 0;
   }
 
   .language p {
     text-align: justify;
     padding: 8px 5px;
-    font-size: 10px;
+    font-size: 15px;
     color:#fff;
   }
 
@@ -1077,15 +1115,18 @@ footer {
     background-color: #000;
     color: #fff;
     max-height: 80px;
-    min-width: 320px;
+    width: 100%;
   }
 
   footer .container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
   }
   .foo-logo img {
-    margin-left: 80px;
+    margin-left: 0;
     vertical-align: bottom;
     max-width: 30px;
     max-height: 30px;
@@ -1094,11 +1135,65 @@ footer {
   .foo-logo.rs img {
     max-width: 40px;
     max-height: 20px;
-    margin-left: 60px;
+    margin-left: 0;
   }
 
   .jear p{
     margin-top: 5px;
-    margin-left: 90px;
+    margin-left: 0;
   }
+}
+
+@media screen and (max-width: 550px) {
+
+  .status {
+    font-size: 25px;
+    width: 70%;
+    margin: 15px auto 25px;
+  }
+
+  .info-contact ul {
+    width: 100%;
+    margin-left: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 95px;
+  }
+
+  .education ul {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    gap: 30px;
+  }
+
+  .education .edu-item {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    margin: 0;
+    justify-content: space-between;
+  }
+
+  .education .edu-item>div:last-child {
+    max-width: 35px;
+  }
+
+    .example-modal {
+      display: none;
+      left: 5%;
+      top: 15%;
+      padding: 10px 5px;
+      font-size: 12px;
+      width: 90%;
+    }
+    .example span {
+      color: brown;
+      font-size: 20px;
+    }
+
+    .container-example code {
+      position: relative;
+      left: -30px;
+    }
 }

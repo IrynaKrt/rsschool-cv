@@ -1,4 +1,6 @@
 window.addEventListener('DOMContentLoaded', () => {
+    const body = document.body;
+    const main = document.querySelector("main");
     //Burger
     function bindBurger(btnSelector, imgSelector, menuSelector, linkSelector, closeSelector) {
         const btn = document.querySelector(btnSelector),
@@ -7,18 +9,22 @@ window.addEventListener('DOMContentLoaded', () => {
               links = document.querySelectorAll(linkSelector),
               close = document.querySelector(closeSelector);
 
-        btn.addEventListener('click', () => {
-            menu.style.display = "block";
 
-            if(document.scrollHeight !== document.offsetHeight) {
-                document.body.style.overflow = "hidden";
-                document.body.style.marginRight = `${scroll}px`;
-            }
+        btn.addEventListener('click', () => {
+            menu.style.width = "100%";
+            main.style.maxHeight = "100vh";
+            main.style.overflow = "hidden";
+            close.style.display = "block";
         });
 
         document.addEventListener('click', (e) => {
             if(e.target !== menu && e.target !== btn && e.target !== img) {
-                menu.style.display = "none";
+                menu.style.width = "0";
+                main.style.maxHeight = "";
+                main.style.overflow = "";
+                setTimeout(() => {
+                    close.style.display = "none";
+                }, 450)
 
                 if(document.scrollHeight !== document.offsetHeight) {
                     document.body.style.overflow = "";
@@ -29,7 +35,12 @@ window.addEventListener('DOMContentLoaded', () => {
 
         links.forEach(link => {
             link.addEventListener('click', () => {
-                menu.style.display = "none";
+                menu.style.width = "0";
+                main.style.maxHeight = "";
+                main.style.overflow = "";
+                setTimeout(() => {
+                    close.style.display = "none";
+                }, 450)
 
 
             if(document.scrollHeight !== document.offsetHeight) {
@@ -40,7 +51,12 @@ window.addEventListener('DOMContentLoaded', () => {
         });
 
         close.addEventListener('click', () => {
-            menu.style.display = "none";
+            menu.style.width = "0";
+            main.style.maxHeight = "";
+            main.style.overflow = "";
+            setTimeout(() => {
+                close.style.display = "none";
+            }, 450)
 
             if(document.scrollHeight !== document.offsetHeight) {
                 document.body.style.overflow = "";
@@ -63,8 +79,8 @@ window.addEventListener('DOMContentLoaded', () => {
         modal.addEventListener('click', (e) => {
             if (e.target === modal) {
                 modal.style.display = "none";
-                document.body.style.overflow = "";
-                document.body.style.marginRight = `0px`;
+                body.style.overflow = "";
+                body.style.maxWidth = "";
             }
         });
 
@@ -79,8 +95,8 @@ window.addEventListener('DOMContentLoaded', () => {
                 }
     
                 modal.style.display = "block";
-                document.body.style.overflow = "hidden";
-                document.body.style.marginRight = `${scroll}px`;
+                body.style.overflow = "hidden";
+                body.style.maxWidth = "100vw";
             });
         });
 
@@ -89,8 +105,8 @@ window.addEventListener('DOMContentLoaded', () => {
                 item.classList.add('hidden');
                 item.style.display = 'none';
             });
-            document.body.style.overflow = "";
-            document.body.style.marginRight = `0px`;
+            body.style.overflow = "";
+            body.style.maxWidth = "";
         });
     }
 
