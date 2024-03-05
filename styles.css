@@ -42,16 +42,6 @@ html, body {
   }
 }
 
-@keyframes showRight {
-  from {right:-200%;}
-  to {right:0;}
-}
-
-@keyframes hideRight {
-  from {right: 0;}
-  to {right: -250%;}
-}
-
 header {
   background-color: #000;
   color: #fff;
@@ -77,7 +67,9 @@ header {
 }
 
 .burger-menu {
-  display: none;
+  width: 0;
+  overflow: hidden;
+  transition: width 500ms ease-in-out;
 }
 
 .menu {
@@ -501,10 +493,6 @@ footer {
     display: none;
   }
 
-  .burger-menu {
-    display: none;
-  }
-
   .menu {
     margin-left: 80px;
   }
@@ -742,19 +730,17 @@ footer {
   .burger-menu {
     z-index: 20;
     position: fixed;
-    display: none;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    width: 100vw;
     height: 380px;
     background-color:#fff;
   }
 
   .burger-menu .close{
     position: fixed;
-    display: block;
+    display: none;
     font-size: 80px;
     padding: 0;
     margin: 0;
