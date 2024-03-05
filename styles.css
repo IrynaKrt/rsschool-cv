@@ -11,6 +11,10 @@ html, body {
   overflow-x: hidden;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 @keyframes background-change {
@@ -54,11 +58,12 @@ header {
 .header .container {
   display: flex;
   align-items: center;
-  padding: 10px;
+  padding: 10px 0;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .logo img {
-  margin-left: 60px;
   vertical-align: bottom;
 }
 
@@ -74,11 +79,14 @@ header {
 
 .menu {
   margin-left: 280px;
+  display: flex;
+  align-items: end;
 }
 
 .menu ul {
   list-style: none;
   display: flex;
+  align-items: center;
   margin-left: 170px;
 }
 
@@ -98,13 +106,11 @@ header {
 
 main {
   display: flex;
-  margin-top: 75px;
-  max-width: 1903px;
-  max-height: 1846px;
+  margin: 70px auto 0;
+  max-width: 90%;
 }
 
 .basic-info {
-  margin-left: 60px;
   max-width: 500px;
   min-height: 100vh;
   display: flex;
@@ -193,16 +199,18 @@ main {
 
 .prof-info {
   margin: 50px 0 0 40px;
+  max-width: 100%;
 }
 
 .education h2 {
   font-size: 40px;
   border-bottom: 5px solid #000;
-  max-width: 1440px;
+  max-width: 100%;
 }
 
 .education ul {
   display: flex;
+  justify-content: space-between;
   list-style: none;
   max-width: 100%;
 }
@@ -210,8 +218,8 @@ main {
 .education .edu-item {
   display: flex;
   flex-direction: column;
-  margin: 30px 60px;
-  max-width:250px;
+  margin: 30px 0;
+  max-width: 250px;
   text-align: center;
   font-size: 20px;
 }
@@ -236,13 +244,14 @@ main {
 
 .skills ul {
   display: flex;
+  justify-content: space-between;
   list-style: none;
   margin: 0;
 }
 
 .skills .skill-item {
   display: flex;
-  margin: 30px 42px 15px;
+  margin: 30px 0 15px;
   max-width: 400px;
   font-size: 20px;
 }
@@ -250,7 +259,6 @@ main {
 .skill-item img {
   max-width: 150px;
   max-height: 150px;
-  margin-left: 40px;
 }
 
 .skills-more h3 {
@@ -259,13 +267,13 @@ main {
   padding: 5px 12px;
   max-width: 200px;
   font-size: 30px;
-  margin-top: 20px;
-  margin-left: 510px;
+  margin: 20px auto 40px;
 }
 
 
 .skills-more ul {
-  margin-left: 260px;
+  max-width: 80%;
+  margin: 0 auto;
   display: block;
   font-size: 25px;
   list-style: none;
@@ -297,7 +305,7 @@ main {
 .example h2 {
   font-size: 40px;
   border-bottom: 5px solid #000;
-  max-width: 1440px;
+  max-width: 100%;
 }
 
 .example .btn-example {
@@ -399,20 +407,21 @@ main {
   margin: 15px 0;
   font-size: 40px;
   border-bottom: 5px solid #000;
-  max-width: 1400px;
+  max-width: 100%;
 }
 
 .language .type {
-  display: flex;
-  max-width: 1400px;
+  display: grid;
+  max-width: 100%;
+  width: 100%;
   padding: 20px 30px;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
 }
 
 .type .english   {
   border-style: dashed;
   text-align: center;
-  margin-left: 0 auto;
-  margin-right: 100px;
   margin-bottom: 20px;
 }
 
@@ -430,6 +439,7 @@ div .english {
   color: #fff;
   text-align: center;
   padding: 10px;
+  width: 100%;
 }
 
 .type .germany   {
@@ -463,31 +473,25 @@ footer {
   background-color: #000;
   color: #fff;
   max-height: 80px;
+  width: 100%;
 }
 
 .footer .container {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   padding: 10px;
-
+  width: 90%;
+  margin: 0 auto;
 }
 
 .foo-logo img {
-  margin-left: 450px;
   vertical-align: bottom;
   max-width: 50px;
   max-height: 50px;
 }
 
-.jear p{
-  margin-left: 450px;
-}
-
-@media screen and (max-width: 1400px) and (min-width: 769px) {
-
-  .logo img {
-    margin-left: 50px;
-  }
+@media screen and (max-width: 1440px) {
 
   .btn-burger {
     display: none;
@@ -503,7 +507,7 @@ footer {
 
   main {
     display: flex;
-    max-width: 1440px;
+    max-width: 100%;
     max-height: 1700px;
   }
 
@@ -551,21 +555,20 @@ footer {
   }
 
   .prof-info {
-    margin: 50px 0 0 30px;
+    margin: 50px 30px 0 30px;
   }
 
   .education h2 {
     font-size: 30px;
-    min-width: 768px;
-    max-width: 1050px;
+    max-width: 100%;
   }
 
   .education ul {
-    max-width: 786px;
+    max-width: 100%;
   }
 
   .education .edu-item {
-    margin: 30px 53px;
+    margin: 30px 0;
     font-size: 18px;
   }
 
@@ -575,33 +578,28 @@ footer {
 
   .skills h2 {
     font-size: 30px;
-    min-width: 768px;
-    max-width: 1400px;
+    max-width: 100%;
   }
 
 
   .skills .skill-item {
     display: flex;
-    margin: 30px 40px 15px;
-    min-width: 100px;
+    margin: 30px 0 15px;
     font-size: 15px;
   }
 
   .skill-item img {
     max-width: 120px;
     max-height: 120px;
-    margin-left: 10px;
   }
 
   .skills-more h3 {
     max-width: 150px;
     font-size: 20px;
-    margin-left: 400px;
   }
 
 
   .skills-more ul {
-    margin-left: 170px;
     font-size: 20px;
   }
 
@@ -621,21 +619,20 @@ footer {
   .example h2 {
     font-size: 30px;
     border-bottom: 5px solid #000;
-    max-width: 1440px;
-    min-width: 768px;
+    max-width: 100%;
   }
   .example .btn-example {
     height: 50px;
     width: 200px;
-    padding: 5px 20px;
+    padding: 7px 20px 5px;
     font-size: 20px;
   }
 
   .example-modal {
-    max-width: 700px;
-    left: 30%;
-    top: 60%;
-    font-size: 10px;
+    max-width: 800px;
+    left: 40%;
+    top: 17%;
+    font-size: 15px;
     padding: 20px 10px;
   }
 
@@ -654,19 +651,12 @@ footer {
 
   .language h2 {
     font-size: 30px;
-    max-width: 1400px;
-    min-width: 768px;
+    max-width: 100%;
   }
 
   .language .type {
-    display: flex;
-    max-width: 1400px;
-    min-width: 768px;
+    max-width: 100%;
     padding: 20px 30px;
-  }
-
-  .type .english   {
-    margin-right: 80px;
   }
 
   .language  h3 {
@@ -681,28 +671,24 @@ footer {
     background-color: #000;
     color: #fff;
     max-height: 80px;
-    min-width: 1440px;
+    max-width: 100%;
   }
 
   .footer .container {
     display: flex;
     align-items: center;
-    padding: 10px;
-
+    justify-content: space-between;
+    padding: 10px 0;
+    max-width: 90%;
   }
 
   .foo-logo img {
-    margin-left: 350px;
     vertical-align: bottom;
     max-width: 50px;
     max-height: 50px;
   }
-
-  .jear p{
-    margin-left: 250px;
-  }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 950px) {
 
   header .container {
     justify-content: space-between;
@@ -955,15 +941,13 @@ footer {
 
   .skills .skill-item {
     display: flex;
-    margin: 30px 2px 15px;
-    max-width: 50px;
+    margin: 30px 0 15px;
     font-size: 10px;
   }
 
   .skill-item img {
-    max-width: 50px;
-    max-height: 50px;
-    margin-left: 0;
+    max-width: 70px;
+    max-height: 70px;
   }
 
   .skills-more h3 {
@@ -976,10 +960,10 @@ footer {
   }
 
   .skills-more ul {
-    margin: 0;
+    margin: 0 auto;
     font-size: 13px;
     padding: 0;
-    width: 100%;
+    width: 80%;
   }
 
   .skills-more .more-item {
