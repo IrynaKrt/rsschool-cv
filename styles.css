@@ -1226,6 +1226,10 @@ footer {
     animation: 1.2s infinite ease-in-out load;
   }
 
+  ul .skills {
+    flex-wrap: wrap;
+  }
+
   .example-modal {
     display: none;
     left: 5%;
