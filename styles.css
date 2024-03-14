@@ -62,6 +62,7 @@ header {
   width: 100%;
   left: 0;
   top: 0;
+  z-index: 100;
 }
 
 .header .container {
@@ -411,6 +412,7 @@ button {
 .skills-more .more-item {
   display: flex;
   margin: 20px 0 2px 30px;
+  align-items: center;
 }
 
 .skills-more .wait .more-link {
@@ -621,18 +623,33 @@ footer {
 }
 
 body.theme-dark {
-  background-color: rgba(207, 206, 206, 0.829);
+  background-color: rgba(0, 0, 0, 0.829);
+  color: #ccc;
+  border-color: #ccc;
+}
+
+body.theme-dark h2,
+body.theme-dark h3 {
+  border-color: #ccc;
 }
 
 body.theme-dark .menu-item a,
 body.theme-dark .basic-info,
 body.theme-dark button,
-body.theme-dark .btn-example {
+body.theme-dark .btn-example,
+body.theme-dark .inner,
+body.theme-dark .more-link a {
   color: #ccc;
 }
 
 body.theme-dark  .more-link a:hover {
   color: rgb(8, 109, 30);
+}
+
+body.theme-dark .education .edu-item img,
+body.theme-dark .skill-item img,
+body.theme-dark .skills-more .more-item img {
+  filter: invert(0.85);
 }
 
 @media screen and (max-width: 1440px) {
@@ -927,7 +944,7 @@ body.theme-dark  .more-link a:hover {
   }
 
   .menu {
-    margin-left: 180px;
+    margin-left: 20px;
   }
 
   .menu ul {
