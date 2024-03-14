@@ -629,6 +629,18 @@ body.theme-dark {
   border-color: #ccc;
 }
 
+body.theme-dark .burger-menu,
+body.theme-dark .burger-menu .close,
+body.theme-dark .burger-menu li>a.burger-item {
+  background-color: rgb(0, 0, 0);
+  color: #ccc;
+  border-color: #ccc;
+}
+
+body.theme-dark .burger-menu a.burger-item.active {
+  color: rgba(43, 158, 9, 0.7);
+}
+
 body.theme-dark h2,
 body.theme-dark h3 {
   border-color: #ccc;
