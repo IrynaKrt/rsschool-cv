@@ -1192,6 +1192,11 @@ body.theme-dark  .btn-burger img {
     animation: hidden 1s 1;
   }
 
+  .example-close {
+    top: -4rem;
+    right: -1.5rem;
+  }
+
   .example-modal {
     display: none;
     left: 5%;
