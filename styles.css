@@ -316,11 +316,6 @@ main {
 .education .edu-item img {
   max-width: 100px;
   max-height: 100px;
-  filter: brightness(0.5);
-}
-
-.education li:nth-child(2) .edu-item img {
-  filter: none;
 }
 
 .education span {
@@ -332,7 +327,6 @@ main {
 .education .edu-item .load-container {
   display: grid;
   place-content: center;
-  background: white;
   margin-top: 15px;
 }
 
@@ -624,6 +618,21 @@ footer {
   vertical-align: bottom;
   max-width: 50px;
   max-height: 50px;
+}
+
+body.theme-dark {
+  background-color: rgba(207, 206, 206, 0.829);
+}
+
+body.theme-dark .menu-item a,
+body.theme-dark .basic-info,
+body.theme-dark button,
+body.theme-dark .btn-example {
+  color: #ccc;
+}
+
+body.theme-dark  .more-link a:hover {
+  color: rgb(8, 109, 30);
 }
 
 @media screen and (max-width: 1440px) {
