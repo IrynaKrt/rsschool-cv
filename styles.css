@@ -462,8 +462,8 @@ button {
 
 .example-close {
   position: absolute;
-  top: -5rem;
-  right: -1.5rem;
+  top: -1.5rem;
+  right: -4.5rem;
   font-size: 5rem;
   width: 5rem;
   height: 5rem;
@@ -476,6 +476,7 @@ button {
   color: #000;
   border: none;
   cursor: pointer;
+  z-index: 110;
 }
 
 .example-modal .hidden {
