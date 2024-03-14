@@ -673,7 +673,7 @@ body.theme-dark  .btn-burger img {
   }
 
   .menu {
-    margin-left: 80px;
+    margin-left: 35px;
   }
 
   .menu-item {
@@ -863,7 +863,7 @@ body.theme-dark  .btn-burger img {
     max-height: 50px;
   }
 }
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 1160px) {
 
   header .container {
     justify-content: space-between;
@@ -1112,6 +1112,7 @@ body.theme-dark  .btn-burger img {
     display: flex;
     width: 100%;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   .skills .skill-item {
@@ -1183,7 +1184,7 @@ body.theme-dark  .btn-burger img {
     height: 50px;
     width: 200px;
     padding: 5px 10px;
-    font-size: 23px;
+    font-size: 18px;
     margin: 0 auto;
   }
 
