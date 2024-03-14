@@ -649,7 +649,8 @@ body.theme-dark  .more-link a:hover {
 
 body.theme-dark .education .edu-item img,
 body.theme-dark .skill-item img,
-body.theme-dark .skills-more .more-item img {
+body.theme-dark .skills-more .more-item img,
+body.theme-dark  .btn-burger img {
   filter: invert(0.85);
 }
 
