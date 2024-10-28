@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
@@ -21,17 +21,23 @@
                 <a href="https://github.com/IrynaKrt"><img src="assets/images/logo-me.png" width="50" height="50" alt="logo"></a>
             </div>
             <nav class="menu">
-                <ul>
-                    <li class="menu-item">
-                        <a href="https://github.com/IrynaKrt/Momentum" title="Примеры моих работ">Rsschool</a>
-                    </li>
-                    <li class="menu-item bio">
-                        <a href="https://github.com/IrynaKrt/Marvel" title="Примеры моих работ">Udemy</a>
-                    </li>
-                    <li class="menu-item contact">
-                        <a href="https://github.com/IrynaKrt/MySolution" title="Примеры моих работ">Codewars</a>
-                    </li>
-                </ul>
+                <div class="desctop">
+                    <ul>
+                        <li class="menu-item">
+                            <a href="https://github.com/IrynaKrt/Momentum" title="Примеры моих работ">Rsschool</a>
+                        </li>
+                        <li class="menu-item bio">
+                            <a href="https://github.com/IrynaKrt/Marvel" title="Примеры моих работ">Udemy</a>
+                        </li>
+                        <li class="menu-item contact">
+                            <a href="https://github.com/IrynaKrt/MySolution" title="Примеры моих работ">Codewars</a>
+                        </li>
+                    </ul>
+                    <label id="switch" class="switch">
+                        <input type="checkbox" id="slider">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
                 <button class="btn-burger"><img src="assets/images/burger.png" class ="img-burger" alt="burger" width="50" height="50"></button>
                 <div class="burger-menu">
                     <button class="close">&times;</button>
@@ -60,14 +66,14 @@
                     <div class="name">
                         <h1 class="name">Iryna Sittsava</h1>
                     </div>
-                    <h2 class="status">Student & future full-stack developer</h2>
+                    <h2 class="status">Junior frontend<br>&<br>future full-stack developer</h2>
                 </div>
                 <div class="info-bio">
                     <div class="bio">
                         <h2>BIO</h2>
                     </div>
-                    <p class="bio">My name is Irina, I'm 20 years old and my English is not that good...</p>
-                    <p class="bio">By education I am a teacher of German, with level B2, but I became interested in another "language". And now for a little over 5 months I have been learning JavaScript!</p>
+                    <p class="bio">My name is Irina, I'm 21 years old and my English is not that good...</p>
+                    <p class="bio">By education I am a teacher of German, with level B2, but I became interested in another "language".</p>
                     <p class="bio">Of my strengths, I can single out perseverance and diligence - which allows me not to quit my studies, even when it is very difficult! I am also an open, active and very sociable person.</p>
                     <br>
                     <p class="bio">I am ready to learn and learn new things, because I want to be useful!</p>
@@ -79,7 +85,7 @@
                             <div class="contact-item">
                                 <a href="https://mail.google.com"><img src="assets/images/gmail.png" alt="mail"></a>
                                 <div class="item-link">
-                                    <a href="https://mail.google.com">irynakrt@gmail.com</a>
+                                    <a href="mailto:irynasitts@gmail.com">irynasitts@gmail.com</a>
                                 </div>
                             </div>
                         </li>
@@ -118,37 +124,55 @@
                     <ul class="education">
                         <li>
                             <div class="edu-item">
-                                <a href="https://lgk.mslu.by/"><img src="assets/images/mslu.png" alt="MSLU"></a>
+                                <a href="https://lgk.mslu.by/" target="_blank"><img src="assets/images/mslu.png" alt="MSLU"></a>
                                 <div>MSLU <br> College Of <br> Linguistics</div>
                                 <div>2018-2022</div>
                             </div>
                         </li>
                         <li>
                             <div class="edu-item">
-                                <a href="/assets/images/it-certificate.jpeg"><img src="assets/images/itlog.png" alt="Itlogia"></a>
-                                <div>Intensive: <br>"Frontend Start"<br> from Itlogia</div>
+                                <a href="/assets/images/it-certificate.jpeg" target="_blank"><img src="assets/images/itlog.png" alt="Itlogia"></a>
+                                <div>Intensive:<br>"Frontend Start"<br>from Itlogia</div>
                                 <div>2022</div>
                             </div>
                         </li>
                         <li>
                             <div class="edu-item">
-                                <a href="/assets/images/udemy-certificate.jpg"><img src="assets/images/udemy.png" alt="Udemy"></a>
-                                <div>Practical <br> JavaScript <br><span>(Advanced level)</span></div>
+                                <a href="/assets/images/udemy-certificate.jpg" target="_blank"><img src="assets/images/udemy.png" alt="Udemy"></a>
+                                <div>Practical<br>JavaScript<br><span>(Advanced level)</span></div>
                                 <div>2022</div>
                             </div>
                         </li>
                         <li>
                             <div class="edu-item">
-                                <a href="https://www.udemy.com/course/javascript_full/"><img src="assets/images/udemy.png" alt="Udemy"></a>
+                                <a href="/assets/images/udemy-certificate-full.jpg" target="_blank"><img src="assets/images/udemy.png" alt="Udemy"></a>
                                 <div>The full course on JavaScript + React<br>from UDEMY</div>
                                 <div>2023</div>
                             </div>
                         </li>
                         <li>
                             <div class="edu-item">
-                                <a href="https://code-basics.com/ru"><img src="assets/images/codebas.png" alt="Code Basic" style="opacity: 100%;"></a>
-                                <div>Courses of <br>HTML& CSS <br>Code Basic </div>
+                                <a href="https://code-basics.com/ru" target="_blank"><img src="assets/images/codebas.png" alt="Code Basic" style="opacity: 100%;"></a>
+                                <div>Courses on<br>HTML& CSS<br>Code Basic </div>
                                 <div>2022</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="edu-item">
+                                <a href="https://www.udemy.com/course/modern_typescript/" target="_blank"><img src="assets/images/udemy.png" alt="Udemy"></a>
+                                <div>The full course<br>on modern<br>TypeScript*</div>
+                                <div class="load-wrapp">
+                                    <div>2023-2024</div>
+                                    <div class="load-container">
+                                        <button>
+                                            <div class="button-loader">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </li>
                     </ul>
@@ -176,9 +200,14 @@
                                 <img src="assets/images/git.png" alt="GIT">
                             </div>
                         </li>
-                                            <li>
+                        <li>
                             <div class="skill-item">
                                 <img src="assets/images/react.png" alt="REACT">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="skill-item">
+                                <img src="assets/images/tss.png" alt="TYPESCRIPT">
                             </div>
                         </li>
                     </ul>
@@ -198,7 +227,7 @@
                             <div class="more-item">
                                 <img src="assets/images/wait.png" width="50" height="50" alt="wait" style="margin-left: 5px;">
                                 <div class="more-link">
-                                    <a href="https://github.com/IrynaKrt/cars-hw">working with JQuery, Bootstrap, Angular;</a>
+                                    <a href="https://irynakrt.github.io/cookies/">working with JQuery, Bootstrap, Angular;</a>
                                 </div>
                             </div>
                         </li>
@@ -252,9 +281,6 @@
                     <!-- <div class="btn-example" title="Скоро появится модальное окно! А пока - тык по кнопочке;)">
                         <a href="https://github.com/IrynaKrt">You find here &hearts;</a>
                     </div> пока что просто ссылка на Github - позже планирую заменить модальным окном -->
-                </div>
-                <div id="expirience" class="experience">
-                    <h3 class="experience"><span style="font-size: 20px;">P.S.</span> I don't have any work experience yet, but<br>I would like to try to work in a team and see how this process really happens!</h3>
                 </div>
             </div>
         </section>
